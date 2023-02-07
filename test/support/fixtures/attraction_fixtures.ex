@@ -1,7 +1,7 @@
-defmodule CastanhalFestAPI.AttractionFixtures do
+defmodule CastanhalFestApi.AttractionFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `CastanhalFestAPI.Attraction` context.
+  entities via the `CastanhalFestApi.Attraction` context.
   """
 
   @doc """
@@ -18,7 +18,7 @@ defmodule CastanhalFestAPI.AttractionFixtures do
         longitude: "some longitude",
         name: "some name"
       })
-      |> CastanhalFestAPI.Attraction.create_attractions()
+      |> CastanhalFestApi.Attraction.create_attractions()
 
     attractions
   end

@@ -1,5 +1,5 @@
-defmodule CastanhalFestAPI.PushNotifications do
-  alias CastanhalFestAPI.Config
+defmodule CastanhalFestApi.PushNotifications do
+  alias CastanhalFestApi.Config
   alias OnesignalElixir.Builder
   [OnesignalElixir.Builder, OnesignalElixir.Notification]
 

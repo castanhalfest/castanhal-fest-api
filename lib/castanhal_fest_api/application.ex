@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Application do
+defmodule CastanhalFestApi.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,20 +9,20 @@ defmodule CastanhalFestAPI.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      CastanhalFestAPI.Repo,
+      CastanhalFestApi.Repo,
       # Start the Telemetry supervisor
-      CastanhalFestAPIWeb.Telemetry,
+      CastanhalFestApiWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: CastanhalFestAPI.PubSub},
+      {Phoenix.PubSub, name: CastanhalFestApi.PubSub},
       # Start the Endpoint (http/https)
-      CastanhalFestAPIWeb.Endpoint
-      # Start a worker by calling: CastanhalFestAPI.Worker.start_link(arg)
-      # {CastanhalFestAPI.Worker, arg}
+      CastanhalFestApiWeb.Endpoint
+      # Start a worker by calling: CastanhalFestApi.Worker.start_link(arg)
+      # {CastanhalFestApi.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: CastanhalFestAPI.Supervisor]
+    opts = [strategy: :one_for_one, name: CastanhalFestApi.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -30,7 +30,7 @@ defmodule CastanhalFestAPI.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    CastanhalFestAPIWeb.Endpoint.config_change(changed, removed)
+    CastanhalFestApiWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

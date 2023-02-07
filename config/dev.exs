@@ -1,7 +1,7 @@
 import Config
 
 # Configure your database
-config :castanhal_fest_api, CastanhalFestAPI.Repo,
+config :castanhal_fest_api, CastanhalFestApi.Repo,
   username: "postgres",
   password: "postgres",
   database: "castanhal_fest_api_dev",
@@ -15,7 +15,7 @@ config :castanhal_fest_api, CastanhalFestAPI.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :castanhal_fest_api, CastanhalFestAPIWeb.Endpoint,
+config :castanhal_fest_api, CastanhalFestApiWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],

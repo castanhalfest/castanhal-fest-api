@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Uploader do
+defmodule CastanhalFestApi.Uploader do
   def upload(folder, path, opts \\ []), do: do_upload(folder, path, opts)
 
   defp do_upload(_folder, "", _opts), do: {:ok, nil}
@@ -59,10 +59,10 @@ defmodule CastanhalFestAPI.Uploader do
 
   defp settings do
     [
-      access_key_id: CastanhalFestAPI.Config.fetch!(__MODULE__, :aws_access_key),
-      secret_access_key: CastanhalFestAPI.Config.fetch!(__MODULE__, :secret_access_key),
-      region: CastanhalFestAPI.Config.fetch!(__MODULE__, :region),
-      bucket: CastanhalFestAPI.Config.fetch!(__MODULE__, :bucket_name)
+      access_key_id: CastanhalFestApi.Config.fetch!(__MODULE__, :aws_access_key),
+      secret_access_key: CastanhalFestApi.Config.fetch!(__MODULE__, :secret_access_key),
+      region: CastanhalFestApi.Config.fetch!(__MODULE__, :region),
+      bucket: CastanhalFestApi.Config.fetch!(__MODULE__, :bucket_name)
     ]
   end
 
@@ -73,7 +73,7 @@ defmodule CastanhalFestAPI.Uploader do
   end
 
   defp normalize_filename(filename) do
-    unique_identifier = CastanhalFestAPI.Random.generate_number(4)
+    unique_identifier = CastanhalFestApi.Random.generate_number(4)
     "#{unique_identifier}-#{filename}"
   end
 end

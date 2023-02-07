@@ -1,12 +1,12 @@
-defmodule CastanhalFestAPI.Account do
+defmodule CastanhalFestApi.Account do
   @moduledoc """
   The Account context.
   """
 
   import Ecto.Query, warn: false
-  alias CastanhalFestAPI.Repo
+  alias CastanhalFestApi.Repo
 
-  alias CastanhalFestAPI.Account.User
+  alias CastanhalFestApi.Account.User
 
   @doc """
   Returns the list of users.

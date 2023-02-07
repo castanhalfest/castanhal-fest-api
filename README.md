@@ -1,4 +1,4 @@
-# CastanhalFestAPI
+# CastanhalFestApi
 
 To start your Phoenix server:
 

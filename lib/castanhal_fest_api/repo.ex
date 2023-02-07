@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Repo do
+defmodule CastanhalFestApi.Repo do
   use Ecto.Repo,
     otp_app: :castanhal_fest_api,
     adapter: Ecto.Adapters.Postgres

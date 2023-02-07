@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Events.Event do
+defmodule CastanhalFestApi.Events.Event do
   use Ecto.Schema
   import Ecto.Changeset
 

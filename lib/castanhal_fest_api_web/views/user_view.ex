@@ -1,6 +1,6 @@
-defmodule CastanhalFestAPIWeb.UserView do
-  use CastanhalFestAPIWeb, :view
-  alias CastanhalFestAPIWeb.UserView
+defmodule CastanhalFestApiWeb.UserView do
+  use CastanhalFestApiWeb, :view
+  alias CastanhalFestApiWeb.UserView
 
   def render("index.json", %{users: users}) do
     %{data: render_many(users, UserView, "user.json")}

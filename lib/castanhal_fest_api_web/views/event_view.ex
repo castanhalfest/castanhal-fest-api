@@ -1,6 +1,6 @@
-defmodule CastanhalFestAPIWeb.EventView do
-  use CastanhalFestAPIWeb, :view
-  alias CastanhalFestAPIWeb.EventView
+defmodule CastanhalFestApiWeb.EventView do
+  use CastanhalFestApiWeb, :view
+  alias CastanhalFestApiWeb.EventView
   use Phoenix.HTML
 
   def render("index.json", %{events: events}) do

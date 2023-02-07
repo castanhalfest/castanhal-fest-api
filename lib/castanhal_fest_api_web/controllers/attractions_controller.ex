@@ -1,10 +1,10 @@
-defmodule CastanhalFestAPIWeb.AttractionsController do
-  use CastanhalFestAPIWeb, :controller
+defmodule CastanhalFestApiWeb.AttractionsController do
+  use CastanhalFestApiWeb, :controller
 
-  alias CastanhalFestAPI.Attraction
-  alias CastanhalFestAPI.Attraction.Attractions
+  alias CastanhalFestApi.Attraction
+  alias CastanhalFestApi.Attraction.Attractions
 
-  action_fallback CastanhalFestAPIWeb.FallbackController
+  action_fallback CastanhalFestApiWeb.FallbackController
 
   def index(conn, _params) do
     attractions = Attraction.list_attractions()

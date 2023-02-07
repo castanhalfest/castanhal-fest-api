@@ -1,7 +1,7 @@
-defmodule CastanhalFestAPIWeb.Auth.Guardian do
+defmodule CastanhalFestApiWeb.Auth.Guardian do
   use Guardian, otp_app: :castanhal_fest_api
 
-  alias CastanhalFestAPI.Account
+  alias CastanhalFestApi.Account
 
   def subject_for_token(user, _claims) do
     sub = to_string(user.id)

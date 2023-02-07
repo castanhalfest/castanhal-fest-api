@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Repo.Migrations.AddCategoryOnEvents do
+defmodule CastanhalFestApi.Repo.Migrations.AddCategoryOnEvents do
   use Ecto.Migration
 
   def change do

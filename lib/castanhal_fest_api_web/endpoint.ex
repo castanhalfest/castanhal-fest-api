@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPIWeb.Endpoint do
+defmodule CastanhalFestApiWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :castanhal_fest_api
 
   # The session will be stored in the cookie and signed,
@@ -45,5 +45,5 @@ defmodule CastanhalFestAPIWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug CastanhalFestAPIWeb.Router
+  plug CastanhalFestApiWeb.Router
 end

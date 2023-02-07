@@ -1,12 +1,12 @@
-defmodule CastanhalFestAPIWeb do
+defmodule CastanhalFestApiWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use CastanhalFestAPIWeb, :controller
-      use CastanhalFestAPIWeb, :view
+      use CastanhalFestApiWeb, :controller
+      use CastanhalFestApiWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule CastanhalFestAPIWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: CastanhalFestAPIWeb
+      use Phoenix.Controller, namespace: CastanhalFestApiWeb
 
       import Plug.Conn
-      import CastanhalFestAPIWeb.Gettext
-      alias CastanhalFestAPIWeb.Router.Helpers, as: Routes
+      import CastanhalFestApiWeb.Gettext
+      alias CastanhalFestApiWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -31,7 +31,7 @@ defmodule CastanhalFestAPIWeb do
     quote do
       use Phoenix.View,
         root: "lib/castanhal_fest_api_web/templates",
-        namespace: CastanhalFestAPIWeb
+        namespace: CastanhalFestApiWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -54,7 +54,7 @@ defmodule CastanhalFestAPIWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import CastanhalFestAPIWeb.Gettext
+      import CastanhalFestApiWeb.Gettext
     end
   end
 
@@ -63,10 +63,10 @@ defmodule CastanhalFestAPIWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import CastanhalFestAPIWeb.ErrorHelpers
-      import CastanhalFestAPIWeb.ImageHelpers
-      import CastanhalFestAPIWeb.Gettext
-      alias CastanhalFestAPIWeb.Router.Helpers, as: Routes
+      import CastanhalFestApiWeb.ErrorHelpers
+      import CastanhalFestApiWeb.ImageHelpers
+      import CastanhalFestApiWeb.Gettext
+      alias CastanhalFestApiWeb.Router.Helpers, as: Routes
     end
   end
 

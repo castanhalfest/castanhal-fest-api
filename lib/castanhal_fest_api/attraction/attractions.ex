@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Attraction.Attractions do
+defmodule CastanhalFestApi.Attraction.Attractions do
   use Ecto.Schema
   import Ecto.Changeset
 

@@ -1,10 +1,10 @@
-defmodule CastanhalFestAPIWeb.EventController do
-  use CastanhalFestAPIWeb, :controller
+defmodule CastanhalFestApiWeb.EventController do
+  use CastanhalFestApiWeb, :controller
 
-  alias CastanhalFestAPI.Events
-  alias CastanhalFestAPI.Events.Event
+  alias CastanhalFestApi.Events
+  alias CastanhalFestApi.Events.Event
 
-  action_fallback CastanhalFestAPIWeb.FallbackController
+  action_fallback CastanhalFestApiWeb.FallbackController
 
   def index(conn, %{"category" => category} = _params) do
     events = Events.list_events(%{category: category})
@@ -20,7 +20,7 @@ defmodule CastanhalFestAPIWeb.EventController do
     with {:ok, %Event{} = event} <-
            Events.create_event(event_params, Map.get(event_params, "image_url", "")) do
       %{"content_push" => content, "name" => subject} = event_params
-      CastanhalFestAPI.PushNotifications.send(subject, content, event.id)
+      CastanhalFestApi.PushNotifications.send(subject, content, event.id)
 
       conn
       |> put_status(:created)

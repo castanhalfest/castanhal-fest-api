@@ -5,7 +5,7 @@ import Config
 # The MIX_TEST_PARTITION environment variable can be used
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
-config :castanhal_fest_api, CastanhalFestAPI.Repo,
+config :castanhal_fest_api, CastanhalFestApi.Repo,
   username: "postgres",
   password: "postgres",
   database: "castanhal_fest_api_test#{System.get_env("MIX_TEST_PARTITION")}",
@@ -15,13 +15,13 @@ config :castanhal_fest_api, CastanhalFestAPI.Repo,
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :castanhal_fest_api, CastanhalFestAPIWeb.Endpoint,
+config :castanhal_fest_api, CastanhalFestApiWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "Fk8d1urdcc3PkS3OWOsy3zXV797wZmI3NpBp4uw1uXEx6ZjSQAQLO2Gmrh2irMf3",
   server: false
 
 # In test we don't send emails.
-config :castanhal_fest_api, CastanhalFestAPI.Mailer, adapter: Swoosh.Adapters.Test
+config :castanhal_fest_api, CastanhalFestApi.Mailer, adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test
 config :logger, level: :warn

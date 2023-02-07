@@ -8,13 +8,13 @@
 import Config
 
 config :castanhal_fest_api,
-  ecto_repos: [CastanhalFestAPI.Repo]
+  ecto_repos: [CastanhalFestApi.Repo]
 
 # Configures the endpoint
-config :castanhal_fest_api, CastanhalFestAPIWeb.Endpoint,
+config :castanhal_fest_api, CastanhalFestApiWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: CastanhalFestAPIWeb.ErrorView, accepts: ~w(json), layout: false],
-  pubsub_server: CastanhalFestAPI.PubSub,
+  render_errors: [view: CastanhalFestApiWeb.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: CastanhalFestApi.PubSub,
   live_view: [signing_salt: "ieprbviu"]
 
 # Configures the mailer
@@ -24,7 +24,7 @@ config :castanhal_fest_api, CastanhalFestAPIWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :castanhal_fest_api, CastanhalFestAPI.Mailer, adapter: Swoosh.Adapters.Local
+config :castanhal_fest_api, CastanhalFestApi.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
@@ -47,17 +47,17 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-config :castanhal_fest_api, CastanhalFestAPIWeb.Auth.Guardian,
+config :castanhal_fest_api, CastanhalFestApiWeb.Auth.Guardian,
   issuer: "castanhal_fest_api",
   secret_key: "sB1/GQHfjeS228jAUteJ4Mxk0HxQe/p8uyLtwoHskp35POgX8lLtC3eYMqnzGWG9"
 
-config :castanhal_fest_api, CastanhalFestAPI.Uploader,
+config :castanhal_fest_api, CastanhalFestApi.Uploader,
   aws_access_key: {:system, "AWS_ACCESS_KEY_ID", nil},
   secret_access_key: {:system, "AWS_SECRET_ACCESS_KEY", nil},
   bucket_name: {:system, "BUCKET_NAME", nil},
   region: {:system, "REGION", nil}
 
-config :castanhal_fest_api, CastanhalFestAPI.PushNotifications,
+config :castanhal_fest_api, CastanhalFestApi.PushNotifications,
   onesignal_id: {:system, "ONESIGNAL_ID", nil},
   onesignal_key: {:system, "ONESIGNAL_KEY", nil}
 

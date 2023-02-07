@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Account.User do
+defmodule CastanhalFestApi.Account.User do
   use Ecto.Schema
   import Ecto.Changeset
 

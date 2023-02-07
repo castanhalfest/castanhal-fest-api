@@ -1,15 +1,15 @@
-defmodule CastanhalFestAPIWeb.Router do
-  use CastanhalFestAPIWeb, :router
+defmodule CastanhalFestApiWeb.Router do
+  use CastanhalFestApiWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
   pipeline :auth do
-    plug CastanhalFestAPIWeb.Auth.Pipeline
+    plug CastanhalFestApiWeb.Auth.Pipeline
   end
 
-  scope "/api", CastanhalFestAPIWeb do
+  scope "/api", CastanhalFestApiWeb do
     pipe_through :api
     post "/users/signup", UserController, :create
     post "/users/signin", UserController, :signin
@@ -17,7 +17,7 @@ defmodule CastanhalFestAPIWeb.Router do
     resources "/attractions", AttractionsController
   end
 
-  scope "/api", CastanhalFestAPIWeb do
+  scope "/api", CastanhalFestApiWeb do
     pipe_through [:api, :auth]
     resources "/users", UserController
   end
@@ -34,7 +34,7 @@ defmodule CastanhalFestAPIWeb.Router do
 
     scope "/" do
       pipe_through [:fetch_session, :protect_from_forgery]
-      live_dashboard "/dashboard", metrics: CastanhalFestAPIWeb.Telemetry
+      live_dashboard "/dashboard", metrics: CastanhalFestApiWeb.Telemetry
     end
   end
 

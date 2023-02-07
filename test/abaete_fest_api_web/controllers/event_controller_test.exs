@@ -1,9 +1,9 @@
-defmodule CastanhalFestAPIWeb.EventControllerTest do
-  use CastanhalFestAPIWeb.ConnCase
+defmodule CastanhalFestApiWeb.EventControllerTest do
+  use CastanhalFestApiWeb.ConnCase
 
-  import CastanhalFestAPI.EventsFixtures
+  import CastanhalFestApi.EventsFixtures
 
-  alias CastanhalFestAPI.Events.Event
+  alias CastanhalFestApi.Events.Event
 
   @create_attrs %{
     description: "some description",

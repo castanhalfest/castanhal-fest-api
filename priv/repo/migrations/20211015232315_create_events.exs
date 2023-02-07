@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Repo.Migrations.CreateEvents do
+defmodule CastanhalFestApi.Repo.Migrations.CreateEvents do
   use Ecto.Migration
 
   def change do

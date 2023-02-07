@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPIWeb.ErrorHelpers do
+defmodule CastanhalFestApiWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -25,9 +25,9 @@ defmodule CastanhalFestAPIWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(CastanhalFestAPIWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(CastanhalFestApiWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(CastanhalFestAPIWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(CastanhalFestApiWeb.Gettext, "errors", msg, opts)
     end
   end
 end

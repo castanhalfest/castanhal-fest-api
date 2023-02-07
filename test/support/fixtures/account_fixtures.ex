@@ -1,7 +1,7 @@
-defmodule CastanhalFestAPI.AccountFixtures do
+defmodule CastanhalFestApi.AccountFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `CastanhalFestAPI.Account` context.
+  entities via the `CastanhalFestApi.Account` context.
   """
 
   @doc """
@@ -17,7 +17,7 @@ defmodule CastanhalFestAPI.AccountFixtures do
         password_hash: "some password_hash",
         phone: "some phone"
       })
-      |> CastanhalFestAPI.Account.create_user()
+      |> CastanhalFestApi.Account.create_user()
 
     user
   end

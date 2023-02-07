@@ -1,12 +1,12 @@
-defmodule CastanhalFestAPI.EventsTest do
-  use CastanhalFestAPI.DataCase
+defmodule CastanhalFestApi.EventsTest do
+  use CastanhalFestApi.DataCase
 
-  alias CastanhalFestAPI.Events
+  alias CastanhalFestApi.Events
 
   describe "events" do
-    alias CastanhalFestAPI.Events.Event
+    alias CastanhalFestApi.Events.Event
 
-    import CastanhalFestAPI.EventsFixtures
+    import CastanhalFestApi.EventsFixtures
 
     @invalid_attrs %{description: nil, image_url: nil, name: nil}
 

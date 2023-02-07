@@ -1,6 +1,6 @@
-defmodule CastanhalFestAPI do
+defmodule CastanhalFestApi do
   @moduledoc """
-  CastanhalFestAPI keeps the contexts that define your domain
+  CastanhalFestApi keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

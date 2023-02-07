@@ -1,7 +1,7 @@
-defmodule CastanhalFestAPI.EventsFixtures do
+defmodule CastanhalFestApi.EventsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `CastanhalFestAPI.Events` context.
+  entities via the `CastanhalFestApi.Events` context.
   """
 
   @doc """
@@ -15,7 +15,7 @@ defmodule CastanhalFestAPI.EventsFixtures do
         image_url: "some image_url",
         name: "some name"
       })
-      |> CastanhalFestAPI.Events.create_event()
+      |> CastanhalFestApi.Events.create_event()
 
     event
   end

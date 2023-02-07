@@ -1,7 +1,7 @@
-defmodule CastanhalFestAPIWeb.AttractionsView do
-  use CastanhalFestAPIWeb, :view
+defmodule CastanhalFestApiWeb.AttractionsView do
+  use CastanhalFestApiWeb, :view
   use Phoenix.HTML
-  alias CastanhalFestAPIWeb.AttractionsView
+  alias CastanhalFestApiWeb.AttractionsView
 
   def render("index.json", %{attractions: attractions}) do
     %{data: render_many(attractions, AttractionsView, "attractions.json")}

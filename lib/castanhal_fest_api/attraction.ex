@@ -1,12 +1,12 @@
-defmodule CastanhalFestAPI.Attraction do
+defmodule CastanhalFestApi.Attraction do
   @moduledoc """
   The Attraction context.
   """
 
   import Ecto.Query, warn: false
-  alias CastanhalFestAPI.Repo
+  alias CastanhalFestApi.Repo
 
-  alias CastanhalFestAPI.Attraction.Attractions
+  alias CastanhalFestApi.Attraction.Attractions
 
   @doc """
   Returns the list of attractions.
@@ -141,6 +141,6 @@ defmodule CastanhalFestAPI.Attraction do
   end
 
   def upload_images(file) do
-    CastanhalFestAPI.Uploader.upload("images", file)
+    CastanhalFestApi.Uploader.upload("images", file)
   end
 end

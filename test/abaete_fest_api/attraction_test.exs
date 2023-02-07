@@ -1,12 +1,12 @@
-defmodule CastanhalFestAPI.AttractionTest do
-  use CastanhalFestAPI.DataCase
+defmodule CastanhalFestApi.AttractionTest do
+  use CastanhalFestApi.DataCase
 
-  alias CastanhalFestAPI.Attraction
+  alias CastanhalFestApi.Attraction
 
   describe "attractions" do
-    alias CastanhalFestAPI.Attraction.Attractions
+    alias CastanhalFestApi.Attraction.Attractions
 
-    import CastanhalFestAPI.AttractionFixtures
+    import CastanhalFestApi.AttractionFixtures
 
     @invalid_attrs %{
       address: nil,

@@ -1,12 +1,12 @@
-defmodule CastanhalFestAPI.AccountTest do
-  use CastanhalFestAPI.DataCase
+defmodule CastanhalFestApi.AccountTest do
+  use CastanhalFestApi.DataCase
 
-  alias CastanhalFestAPI.Account
+  alias CastanhalFestApi.Account
 
   describe "users" do
-    alias CastanhalFestAPI.Account.User
+    alias CastanhalFestApi.Account.User
 
-    import CastanhalFestAPI.AccountFixtures
+    import CastanhalFestApi.AccountFixtures
 
     @invalid_attrs %{email: nil, is_admin: nil, name: nil, password_hash: nil, phone: nil}
 

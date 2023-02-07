@@ -1,2 +1,68 @@
-assets/node_modules/
-deps/
+# flyctl launch added from .elixir_ls/.gitignore
+.elixir_ls/**/*
+
+# flyctl launch added from .gitignore
+# The directory Mix will write compiled artifacts to.
+_build
+
+# If you run "mix test --cover", coverage assets end up here.
+cover
+
+# The directory Mix downloads your dependencies sources to.
+deps
+
+# Where 3rd-party dependencies like ExDoc output generated docs.
+doc
+
+# Ignore .fetch files in case you like to edit your project deps locally.
+.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+**/erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+**/*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+**/castanhal_fest_api-*.tar
+
+# Ignore assets that are produced by build tools.
+priv/static/assets
+
+# Ignore digested assets cache.
+priv/static/cache_manifest.json
+
+# In case you use Node.js/npm, you want to ignore these.
+**/npm-debug.log
+assets/node_modules
+
+
+**/config/local*
+
+# flyctl launch added from deps/onesignal_elixir/.gitignore
+# The directory Mix will write compiled artifacts to.
+deps/onesignal_elixir/_build
+deps/onesignal_elixir/.elixir_ls
+
+# If you run "mix test --cover", coverage assets end up here.
+deps/onesignal_elixir/cover
+
+# The directory Mix downloads your dependencies sources to.
+deps/onesignal_elixir/deps
+
+# Where 3rd-party dependencies like ExDoc output generated docs.
+deps/onesignal_elixir/doc
+
+# Ignore .fetch files in case you like to edit your project deps locally.
+deps/onesignal_elixir/.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+deps/onesignal_elixir/**/erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+deps/onesignal_elixir/**/*.ez
+
+# Ignore package tarball (built via "mix hex.build").
+deps/onesignal_elixir/**/onesignal_elixir-*.tar
+
+fly.toml

@@ -1,11 +1,11 @@
-defmodule CastanhalFestAPIWeb.UserController do
-  use CastanhalFestAPIWeb, :controller
+defmodule CastanhalFestApiWeb.UserController do
+  use CastanhalFestApiWeb, :controller
 
-  alias CastanhalFestAPI.Account
-  alias CastanhalFestAPI.Account.User
-  alias CastanhalFestAPIWeb.Auth.Guardian
+  alias CastanhalFestApi.Account
+  alias CastanhalFestApi.Account.User
+  alias CastanhalFestApiWeb.Auth.Guardian
 
-  action_fallback CastanhalFestAPIWeb.FallbackController
+  action_fallback CastanhalFestApiWeb.FallbackController
 
   def index(conn, _params) do
     users = Account.list_users()

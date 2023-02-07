@@ -1,5 +1,5 @@
-defmodule CastanhalFestAPIWeb.ErrorView do
-  use CastanhalFestAPIWeb, :view
+defmodule CastanhalFestApiWeb.ErrorView do
+  use CastanhalFestApiWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

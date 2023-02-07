@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Config do
+defmodule CastanhalFestApi.Config do
   def fetch!(module, key) do
     Confex.fetch_env!(:castanhal_fest_api, module) |> Keyword.fetch!(key)
   end

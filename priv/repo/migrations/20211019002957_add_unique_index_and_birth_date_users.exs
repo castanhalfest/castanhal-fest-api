@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Repo.Migrations.AddUniqueIndexAndBirthDateUsers do
+defmodule CastanhalFestApi.Repo.Migrations.AddUniqueIndexAndBirthDateUsers do
   use Ecto.Migration
 
   def change do

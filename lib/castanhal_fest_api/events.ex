@@ -1,12 +1,12 @@
-defmodule CastanhalFestAPI.Events do
+defmodule CastanhalFestApi.Events do
   @moduledoc """
   The Events context.
   """
 
   import Ecto.Query, warn: false
-  alias CastanhalFestAPI.Repo
+  alias CastanhalFestApi.Repo
 
-  alias CastanhalFestAPI.Events.Event
+  alias CastanhalFestApi.Events.Event
 
   def list_events(filters \\ %{}) do
     build_query(filters)
@@ -131,7 +131,7 @@ defmodule CastanhalFestAPI.Events do
   end
 
   def upload_images(file) do
-    CastanhalFestAPI.Uploader.upload("images", file)
+    CastanhalFestApi.Uploader.upload("images", file)
   end
 
   @doc """

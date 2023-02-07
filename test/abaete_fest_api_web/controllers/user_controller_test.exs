@@ -1,9 +1,9 @@
-defmodule CastanhalFestAPIWeb.UserControllerTest do
-  use CastanhalFestAPIWeb.ConnCase
+defmodule CastanhalFestApiWeb.UserControllerTest do
+  use CastanhalFestApiWeb.ConnCase
 
-  import CastanhalFestAPI.AccountFixtures
+  import CastanhalFestApi.AccountFixtures
 
-  alias CastanhalFestAPI.Account.User
+  alias CastanhalFestApi.Account.User
 
   @create_attrs %{
     email: "some email",

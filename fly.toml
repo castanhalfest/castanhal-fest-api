@@ -1,23 +1,33 @@
-# fly.toml file generated for polished-snowflake-9723 on 2021-10-16T16:22:25-03:00
-app = "castanhal-fest-api"
+# fly.toml file generated for castanhal-fest-api on 2023-02-07T12:57:37-03:00
 
+app = "castanhal-fest-api"
 kill_signal = "SIGTERM"
 kill_timeout = 5
-
-[env]
+processes = []
 
 [deploy]
-  release_command = "/app/bin/castanhal_fest_api eval CastanhalFestAPI.Release.migrate"
+  release_command = "/app/bin/castanhal_fest_api eval CastanhalFestApi.Release.migrate"
+
+[env]
+  PHX_HOST = "castanhal-fest-api.fly.dev"
+  PORT = "8080"
+
+[experimental]
+  auto_rollback = true
 
 [[services]]
-  internal_port = 4000
+  http_checks = []
+  internal_port = 8080
+  processes = ["app"]
   protocol = "tcp"
-
+  script_checks = []
   [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
+    hard_limit = 1000
+    soft_limit = 1000
+    type = "connections"
 
   [[services.ports]]
+    force_https = true
     handlers = ["http"]
     port = 80
 
@@ -26,7 +36,7 @@ kill_timeout = 5
     port = 443
 
   [[services.tcp_checks]]
-    grace_period = "30s" # allow some time for startup
+    grace_period = "1s"
     interval = "15s"
-    restart_limit = 6
+    restart_limit = 0
     timeout = "2s"

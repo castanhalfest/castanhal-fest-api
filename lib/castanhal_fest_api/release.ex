@@ -1,4 +1,4 @@
-defmodule CastanhalFestAPI.Release do
+defmodule CastanhalFestApi.Release do
   @moduledoc """
   Used for executing DB release tasks when run in production without Mix
   installed.

@@ -14,7 +14,7 @@ if config_env() == :prod do
       For example: ecto://USER:PASS@HOST/DATABASE
       """
 
-  config :castanhal_fest_api, CastanhalFestAPI.Repo,
+  config :castanhal_fest_api, CastanhalFestApi.Repo,
     # ssl: true,
     # socket_options: [:inet6],
     url: database_url,
@@ -37,7 +37,7 @@ if config_env() == :prod do
     System.get_env("FLY_APP_NAME") ||
       raise "FLY_APP_NAME not available"
 
-  config :castanhal_fest_api, CastanhalFestAPIWeb.Endpoint,
+  config :castanhal_fest_api, CastanhalFestApiWeb.Endpoint,
     server: true,
     url: [host: "#{app_name}.fly.dev", port: 80],
     http: [
@@ -56,7 +56,7 @@ if config_env() == :prod do
   # If you are doing OTP releases, you need to instruct Phoenix
   # to start each relevant endpoint:
   #
-  #     config :castanhal_fest_api, CastanhalFestAPIWeb.Endpoint, server: true
+  #     config :castanhal_fest_api, CastanhalFestApiWeb.Endpoint, server: true
   #
   # Then you can assemble a release by calling `mix release`.
   # See `mix help release` for more information.
@@ -67,7 +67,7 @@ if config_env() == :prod do
   # Also, you may need to configure the Swoosh API client of your choice if you
   # are not using SMTP. Here is an example of the configuration:
   #
-  #     config :castanhal_fest_api, CastanhalFestAPI.Mailer,
+  #     config :castanhal_fest_api, CastanhalFestApi.Mailer,
   #       adapter: Swoosh.Adapters.Mailgun,
   #       api_key: System.get_env("MAILGUN_API_KEY"),
   #       domain: System.get_env("MAILGUN_DOMAIN")

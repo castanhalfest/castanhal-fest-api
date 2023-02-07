@@ -1,9 +1,9 @@
-defmodule CastanhalFestAPIWeb.AttractionsControllerTest do
-  use CastanhalFestAPIWeb.ConnCase
+defmodule CastanhalFestApiWeb.AttractionsControllerTest do
+  use CastanhalFestApiWeb.ConnCase
 
-  import CastanhalFestAPI.AttractionFixtures
+  import CastanhalFestApi.AttractionFixtures
 
-  alias CastanhalFestAPI.Attraction.Attractions
+  alias CastanhalFestApi.Attraction.Attractions
 
   @create_attrs %{
     address: "some address",
