@@ -14,6 +14,8 @@ defmodule CastanhalFestApiWeb.Router do
     post "/users/signup", UserController, :create
     post "/users/signin", UserController, :signin
     resources "/events", EventController
+    resources "/places", PlaceController
+    resources "/categories", CategoryController
     resources "/attractions", AttractionsController
   end
 
